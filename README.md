@@ -20,7 +20,7 @@ The Full Stack Open 2023 course covers a wide range of topics, including:
 To get started with the course, follow these steps:
 
 1. Clone this repository to your local machine using `git clone https://github.com/UniversityOfHelsinki/full-stack-open.git`.
-2. Navigate to the course directory: `cd full-stack-open-`.
+2. Navigate to the course directory: `cd full-stack-open`.
 3. Follow the instructions in each part's README file to complete the exercises and assignments.
 
 ## Course Structure
