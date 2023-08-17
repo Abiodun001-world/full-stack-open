@@ -6,6 +6,7 @@ This README provides an overview of the solutions and diagrams for exercises 0.4
 
 In this exercise, I created a sequence diagram depicting the process of a user creating a new note using the notes app. The diagram highlights the communication between the browser, the server, the API, and the database.
 
+```
 sequenceDiagram
     participant browser
     participant server
@@ -44,11 +45,13 @@ sequenceDiagram
     deactivate api
 
     Note right of browser: App displays updated notes
+```
 
 ## Exercise 0.5: Single Page App
 
 For this exercise, I created a sequence diagram illustrating the process when a user interacts with the single-page app version of the notes app. The diagram showcases the communication between the browser, the server, the API, and the database.
 
+```
 sequenceDiagram
     participant browser
     participant server
@@ -108,11 +111,12 @@ sequenceDiagram
     deactivate api
 
     Note right of browser: App displays updated notes
-
+```
 ## Exercise 0.6: New Note (SPA)
 
 In this exercise, I created a diagram illustrating the process when a user creates a new note using the single-page version of the app.
 
+```
 sequenceDiagram
     participant browser
     participant server
@@ -151,6 +155,7 @@ sequenceDiagram
     deactivate api
 
     Note right of browser: App displays updated notes
+```
 
 These diagrams represent the solutions for exercises 0.4, 0.5, and 0.6 of Part 0 in the Full Stack Open course. Each diagram illustrates the flow of events and communication between different components involved in the user interactions. You can use the Mermaid syntax provided in this README to visualize the diagrams in a compatible Markdown renderer.
 
