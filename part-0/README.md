@@ -50,7 +50,6 @@ sequenceDiagram
 
     Note right of browser: The browser executes the JavaScript function to update and render the new notes
 ```
-
 ## Exercise 0.5: Single Page App
 
 For this exercise, I created a sequence diagram illustrating the process when a user interacts with the single-page app version of the notes app. The diagram showcases the communication between the browser, the server, the API, and the database.
