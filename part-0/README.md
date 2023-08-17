@@ -10,41 +10,45 @@ In this exercise, I created a sequence diagram depicting the process of a user c
 sequenceDiagram
     participant browser
     participant server
-    participant api
     participant database
 
-    browser->>browser: User writes a new note
-    Note right of browser: Client-side JavaScript captures the note content
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
+    deactivate server
 
-    browser->>api: POST /api/notes
-    activate api
-    api->>server: Add new note to database
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: the css file
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activate server
+    server-->>browser: the JavaScript file
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    deactivate server
+
+    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     server->>database: Insert new note
     activate database
     database-->>server: Note added
     deactivate database
-    server-->>api: Success response
+    server-->>browser: Success response
     deactivate server
-    api-->>browser: Success response
-    deactivate api
 
-    Note right of browser: App updates with new note
-
-    browser->>api: GET /api/notes
-    activate api
-    api->>server: Retrieve updated notes from database
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
-    server->>database: Query notes
-    activate database
-    database-->>server: Updated notes data
-    deactivate database
-    server-->>api: Updated notes data
+    server-->>browser: Updated notes list
     deactivate server
-    api-->>browser: Updated notes data
-    deactivate api
 
-    Note right of browser: App displays updated notes
+    Note right of browser: The browser executes the JavaScript function to update and render the new notes
 ```
 
 ## Exercise 0.5: Single Page App
@@ -111,6 +115,19 @@ sequenceDiagram
     deactivate api
 
     Note right of browser: App displays updated notes
+
+    browser->>api: GET /api/notes
+    activate api
+    api->>server: Retrieve notes from database
+    activate server
+    server->>database: Query notes
+    activate database
+    database-->>server: Notes data
+    deactivate database
+    server-->>api: Notes data
+    deactivate server
+    api-->>browser: Notes data
+    deactivate api
 ```
 ## Exercise 0.6: New Note (SPA)
 
