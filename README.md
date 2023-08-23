@@ -1,6 +1,6 @@
 # Full Stack Open 2023
 
-Welcome to the Full Stack Open 2023 course offered by the Department of Computer Science at the University of Helsinki! This comprehensive course is designed to provide you with a deep understanding of modern web development and equip you with the skills to become a full-stack developer.
+Welcome to the Full Stack Open Spring 2023 course offered by the Department of Computer Science at the University of Helsinki! This comprehensive course is designed to provide you with a deep understanding of modern web development and equip you with the skills to become a full-stack developer.
 
 ## Course Overview
 
